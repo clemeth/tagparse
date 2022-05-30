@@ -1,0 +1,30 @@
+import torch
+
+batch_size = 8
+bert_lr = 3e-06
+cased = False
+parser_lr = 1e-06
+tagger_lr = 8e-05
+device = 'cuda:0'
+early_stop = 5
+epochs = 50
+expand_iota = True
+expand_rough = True
+ignore_punct = True
+last_layer_dropout = 0.3
+max_subword_len = 448
+max_word_len = 208
+mode = 'joint'
+model_name = 'pranaydeeps/Ancient-Greek-BERT'
+models_path = 'models/'
+name = 'AGBERT_proiel_joint'
+num_warmup_steps = 1000
+pad_value = -2
+print_gold = True
+scheduler = 'linear'
+seed = 1
+subword_prefix = '##'
+test_path = 'data/ud_proiel/grc_proiel-ud-test.conllu'
+train_path = 'data/ud_proiel/grc_proiel-ud-train.conllu'
+val_path = 'data/ud_proiel/grc_proiel-ud-dev.conllu'
+vocabs_path = 'vocabs/ud_proiel.json'
