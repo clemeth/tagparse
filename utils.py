@@ -168,8 +168,10 @@ def add_language_specific_tokens(model, tokenizer):
 def load_vocabs(vocabs_path):
     with open(vocabs_path) as f:
         vocabs = json.load(f)
+        vocabs['upos'].insert(0, '[UNK_UPOS]')
+        vocabs['xpos'].insert(0, '[UNK_XPOS]')
         vocabs['feats'].insert(0, '[UNK_FEATS]')
-        vocabs['xpos'].insert(1, '[UNK_XPOS]')
+        vocabs['deprel'].insert(0, '[UNK_DEPREL]')
     return vocabs
 
 
