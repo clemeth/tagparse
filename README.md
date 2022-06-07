@@ -2,9 +2,11 @@
 
 A tagger and a parser that can be trained separately or jointly.
 
+The code was originally written for tagging and parsing Ancient Greek, and the preprocessing is tailored accordingly. The methods containing language-specific details are `normalize_tokens` and `add_language_specific_tokens`. These can be modified to support any language.
+
 The parser is a shallow version of Dozat & Manning's 2017 deep biaffine attention parser, as devised by Glavaš and Vulić (2021b).
 
-The parser implementation builds on [TowerParse](https://github.com/codogogo/towerparse) (Glavaš and Vulić, 2021a). Credit is given in the source code where relevant.
+The implementation builds on [TowerParse](https://github.com/codogogo/towerparse) (Glavaš and Vulić, 2021a). Credit is given in the source code where relevant.
 
 ## Instructions
 
@@ -25,7 +27,7 @@ To train a model, perform the following steps:
   - `expand_rough` (bool): `True` to add a *heta* to words with rough breathing. `False` to do nothing.
   - `ignore_punct` (bool): `True` to ignore punctuation and gap tokens during evaluation with `test.py`.
   - `last_layer_dropout` (float): The dropout probability of the last layer.
-  - `max_subword_len` (int): The maximum number of subword tokens per sentence. Needs to be higher than the maximum number of subword tokens that any sentence in the data is tokenized into.
+  - `max_subword_len` (int): The maximum number of subword tokens per sentence. Needs to be higher than the maximum number of subword tokens that any sentence in the data is tokenized into. The sentences can be pruned using the `write_shortened_dataset` method in `utils.py`.
   - `max_word_len` (int): The maximum number of word tokens per sentence. Needs to be higher than the longest sentence in the data.
   - `mode` (str): `'tag'`, `'parse'` or `'joint'`.
   - `model_name` (str): The Hugging Face path or local path to the transformer model to use. The bundled tokenizer will also be loaded.
