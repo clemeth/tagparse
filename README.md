@@ -1,4 +1,4 @@
-# Tagparse
+# tagparse
 
 A tagger and a parser that can be trained separately or jointly.
 
