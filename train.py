@@ -70,7 +70,7 @@ elif mode == 'joint':
                        {'params': parser_params, 'lr': config.parser_lr}])
 
 # Init scheduler
-num_training_steps = lr_scheduler = get_scheduler(config.scheduler, optimizer=optimizer, num_warmup_steps=config.num_warmup_steps, num_training_steps=config.epochs * len(train_loader))
+lr_scheduler = get_scheduler(config.scheduler, optimizer=optimizer, num_warmup_steps=config.num_warmup_steps, num_training_steps=config.epochs * len(train_loader))
 
 # Total stats
 writer = SummaryWriter(f'runs/{config.name}/')
