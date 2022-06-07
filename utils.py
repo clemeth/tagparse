@@ -340,6 +340,8 @@ def get_word_start_positions(tokens, subwords, offset_mapping):
 
 
 def merge_subword_tokens(subword_outputs, word_starts, hidden_size):
+    # Taken from TowerParse (Glavaš and Vulić 2021a).
+    # https://github.com/codogogo/towerparse/blob/b55b57f2c9b8f71f7bf61a4d4b6110466b58ee68/biaffine.py#L17
     instances = []
 
     # Handling instance by instance
@@ -383,8 +385,6 @@ def feats_to_string(feats):
         for key, value in feats.items():
             if key in IGNORE_FEATS:
                 continue
-            if key == 'PUNCT':  # Specific to our dataset. Can be removed.
-                return key
             if value is None:
                 value = "_"
             fields.append('='.join((key, value)))
