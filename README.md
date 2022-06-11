@@ -2,7 +2,7 @@
 
 A tagger and a parser that can be trained separately or jointly.
 
-The code was originally written for tagging and parsing Ancient Greek, and the preprocessing is tailored accordingly. The methods containing language-specific details are `normalize_tokens` and `add_language_specific_tokens`. These can be modified to support any language.
+The code was originally written for tagging and parsing Ancient Greek, and the preprocessing is tailored accordingly. The methods containing language-specific details are [`normalize_tokens`](utils.py#L210) and [`add_language_specific_tokens`](utils.py#L162) in [`utils.py`](utils.py). These can be modified to support any language.
 
 The parser is a shallow version of Dozat & Manning's 2017 deep biaffine attention parser, as devised by Glavaš and Vulić (2021b).
 
@@ -12,8 +12,8 @@ The implementation builds on [TowerParse](https://github.com/codogogo/towerparse
 
 To train a model, perform the following steps:
 
-0. Dependencies can be installed with `pipenv` using the `Pipfile` directly. Otherwise, inspect the file and install them how you please.
-1. Extract the label vocabulary from your training files using the `extract_vocabs` method in `utils.py`.
+0. Dependencies can be installed with `pipenv` using the [`Pipfile`](Pipfile) directly. Otherwise, inspect the file and install them how you please.
+1. Extract the label vocabulary from your training files using the [`extract_vocabs`](utils.py#L133) method in [`utils.py`](utils.py).
 2. Edit `config.py` to your needs. The following parameters are available:
   - `batch-size` (int): The batch size.
   - `bert_lr` (float): The learning rate for the BERT parameters.
@@ -44,9 +44,9 @@ To train a model, perform the following steps:
   - `train_path`: Path to the CoNLL-U file with training data.
   - `val_path`: Path to the CoNLL-U file with validation data.
   - `vocabs_path`: Path to the JSON file with the extracted label vocabulary (see step 1).
-3. Run `train.py`.
+3. Run [`train.py`](train.py).
 
-To evaluate a model, keep the same config file and run `test.py`. 
+To evaluate a model, keep the same config file and run [`test.py`](test.py). 
 
 ## Bibliography
 
