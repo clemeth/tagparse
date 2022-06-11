@@ -17,9 +17,10 @@ To train a model, perform the following steps:
 2. Edit `config.py` to your needs. The following parameters are available:
   - `batch-size` (int): The batch size.
   - `bert_lr` (float): The learning rate for the BERT parameters.
+  - `classifier_lr` (float): The learning rate for the classifier parameters in a separate model.
+  - `parser_lr` (float): The learning rate for the parser parameters in a joint model.
+  - `tagger_lr` (float): The learning rate for the tagger parameters in a joint model.
   - `cased` (bool): `True` to keep letter case in training data. `False` to lowercase.
-  - `parser_lr` (float): The learning rate for the parser parameters.
-  - `tagger_lr` (float): The learning rate for the tagger parameters.
   - `device` (str): The processing device to run on. `'cpu'` for a regular CPU, and typically something like `'cuda:0'` for GPUs.
   - `early_stop` (int): The number of epochs after which to quit training if validation loss does not decrease.
   - `epochs` (int): The maximum number of epochs to run training for.
