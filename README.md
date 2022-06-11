@@ -40,10 +40,10 @@ To train a model, perform the following steps:
   - `scheduler` (str): The type of scheduler to load from the [`get_scheduler`](https://huggingface.co/docs/transformers/main_classes/optimizer_schedules#transformers.get_scheduler) method from [`transformers`](https://github.com/huggingface/transformers).
   - `seed` (int): The RNG seed.
   - `subword_prefix` (str): The subword prefix used by the transformer model.
-  - `test_path`: Path to the CoNLL-U file with testing data.
-  - `train_path`: Path to the CoNLL-U file with training data.
-  - `val_path`: Path to the CoNLL-U file with validation data.
-  - `vocabs_path`: Path to the JSON file with the extracted label vocabulary (see step 1).
+  - `test_path` (str): Path to the CoNLL-U file with testing data.
+  - `train_path` (str): Path to the CoNLL-U file with training data.
+  - `val_path` (str): Path to the CoNLL-U file with validation data.
+  - `vocabs_path` (str): Path to the JSON file with the extracted label vocabulary (see step 1).
 3. Run [`train.py`](train.py).
 
 To evaluate a model, keep the same config file and run [`test.py`](test.py). 
