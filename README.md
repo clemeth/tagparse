@@ -23,7 +23,7 @@ To train a model, perform the following steps:
   - `device` (str): The processing device to run on. `'cpu'` for a regular CPU, and typically something like `'cuda:0'` for GPUs.
   - `early_stop` (int): The number of epochs after which to quit training if validation loss does not decrease.
   - `epochs` (int): The maximum number of epochs to run training for.
-  - `expand_iota` (bool): `True` to adscript iota supscripts, `False` to do nothing.
+  - `expand_iota` (bool): `True` to adscript iota supscripts. `False` to do nothing.
   - `expand_rough` (bool): `True` to add a *heta* to words with rough breathing. `False` to do nothing.
   - `ignore_punct` (bool): `True` to ignore punctuation and gap tokens during evaluation with `test.py`.
   - `last_layer_dropout` (float): The dropout probability of the last layer.
@@ -35,7 +35,7 @@ To train a model, perform the following steps:
   - `name` (str): A name for the model to be trained/loaded.
   - `num_warmup_steps` (int): The number of warmup steps for the optimizer.
   - `pad_value` (int): A pad value. Needs to be negative.
-  - `print_gold` (bool): `True` to print the gold annotation in predictions during evaluation with `test.py`.
+  - `print_gold` (bool): `True` to write the gold annotation to file when a prediction doesn't match during evaluation with `test.py`.
   - `scheduler` (str): The type of scheduler to load from the `get_scheduler` method from `transformers`.
   - `seed` (int): The RNG seed.
   - `subword_prefix` (str): The subword prefix used by the transformer model.
