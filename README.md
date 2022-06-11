@@ -1,6 +1,6 @@
 # tagparse
 
-A tagger and a parser that can be trained separately or jointly.
+A part-of-speech/morphological tagger and a dependency parser that can be trained separately or jointly.
 
 The code was originally written for tagging and parsing Ancient Greek, and the preprocessing is tailored accordingly. The methods containing language-specific details are [`normalize_tokens`](utils.py#L210) and [`add_language_specific_tokens`](utils.py#L162) in [`utils.py`](utils.py). These can be modified to support any language.
 
