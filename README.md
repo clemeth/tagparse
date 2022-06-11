@@ -42,7 +42,7 @@ To train a model, perform the following steps:
   - `test_path`: Path to the CoNLL-U file with testing data.
   - `train_path`: Path to the CoNLL-U file with training data.
   - `val_path`: Path to the CoNLL-U file with validation data.
-  - `vocabs_path`: Path to the JSON file with the extracted label vocabulary (see step 1)
+  - `vocabs_path`: Path to the JSON file with the extracted label vocabulary (see step 1).
 3. Run `train.py`.
 
 To evaluate a model, keep the same config file and run `test.py`. 
