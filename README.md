@@ -26,18 +26,18 @@ To train a model, perform the following steps:
   - `epochs` (int): The maximum number of epochs to run training for.
   - `expand_iota` (bool): `True` to adscript iota supscripts. `False` to do nothing.
   - `expand_rough` (bool): `True` to add a *heta* to words with rough breathing. `False` to do nothing.
-  - `ignore_punct` (bool): `True` to ignore punctuation and gap tokens during evaluation with `test.py`.
+  - `ignore_punct` (bool): `True` to ignore punctuation and gap tokens during evaluation with [`test.py`](test.py).
   - `last_layer_dropout` (float): The dropout probability of the last layer.
-  - `max_subword_len` (int): The maximum number of subword tokens per sentence. Needs to be higher than the maximum number of subword tokens that any sentence in the data is tokenized into. The sentences can be pruned using the `write_shortened_dataset` method in `utils.py`.
+  - `max_subword_len` (int): The maximum number of subword tokens per sentence. Needs to be higher than the maximum number of subword tokens that any sentence in the data is tokenized into. The sentences can be pruned using the [`write_shortened_dataset`](utils.py#L395) method in [`utils.py`](utils.py).
   - `max_word_len` (int): The maximum number of word tokens per sentence. Needs to be higher than the longest sentence in the data.
   - `mode` (str): `'tag'`, `'parse'` or `'joint'`.
-  - `model_name` (str): The Hugging Face path or local path to the transformer model to use. The bundled tokenizer will also be loaded.
+  - `model_name` (str): The [Hugging Face](https://huggingface.co/) path or local path to the transformer model to use. The bundled tokenizer will also be loaded.
   - `models_path` (str): Path to where models are saved.
   - `name` (str): A name for the model to be trained/loaded.
   - `num_warmup_steps` (int): The number of warmup steps for the optimizer.
   - `pad_value` (int): A pad value. Needs to be negative.
   - `print_gold` (bool): `True` to write the gold annotation to file when a prediction doesn't match during evaluation with `test.py`.
-  - `scheduler` (str): The type of scheduler to load from the `get_scheduler` method from `transformers`.
+  - `scheduler` (str): The type of scheduler to load from the [`get_scheduler`](https://huggingface.co/docs/transformers/main_classes/optimizer_schedules#transformers.get_scheduler) method from [`transformers`](https://github.com/huggingface/transformers).
   - `seed` (int): The RNG seed.
   - `subword_prefix` (str): The subword prefix used by the transformer model.
   - `test_path`: Path to the CoNLL-U file with testing data.
