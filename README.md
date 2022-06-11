@@ -12,7 +12,7 @@ The implementation builds on [TowerParse](https://github.com/codogogo/towerparse
 
 To train a model, perform the following steps:
 
-0. Dependencies can be installed with `pipenv` using the [`Pipfile`](Pipfile) directly. Otherwise, inspect the file and install them how you please.
+0. Dependencies can be installed with [`pipenv`](https://github.com/pypa/pipenv) using the [`Pipfile`](Pipfile) directly. Otherwise, inspect the file and install them how you please.
 1. Extract the label vocabulary from your training files using the [`extract_vocabs`](utils.py#L133) method in [`utils.py`](utils.py).
 2. Edit `config.py` to your needs. The following parameters are available:
   - `batch-size` (int): The batch size.
